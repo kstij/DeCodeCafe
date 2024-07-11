@@ -1,0 +1,32 @@
+/* Home.css */
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../assets/home.png'); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.home-content {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.home-content h1 {
+  line-height: 0.5;
+  font-size: 4rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.home-content h2 {
+  line-height: 0.5;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
