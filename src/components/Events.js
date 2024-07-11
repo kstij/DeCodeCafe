@@ -3,10 +3,11 @@ import './Events.css';
 
 // Import images
 import logoImage from '../assets/devs.png';
+import logoImage1 from '../assets/devs.png';
 
 const Events = () => {
   const upcomingEvents = [
-    { title: 'Upcoming Event 1', image: "devs.png", description: 'Description for upcoming event 1.', youtubeUrl: 'https://www.youtube.com/watch?v=video_id_1' },
+    { title: 'Upcoming Event 1', image: logoImage1, description: 'Description for upcoming event 1.', youtubeUrl: 'https://www.youtube.com/watch?v=video_id_1' },
   ];
 
   const pastEvents = [
@@ -29,6 +30,7 @@ const Events = () => {
                       <p>{event.description}</p>
                     </div>
                   </div>
+                  <img src={event.image} alt={event.title} className="event-image" />
                 </div>
               </a>
             </div>

@@ -1,49 +1,76 @@
 /* AboutUs.css */
 
 .about-us {
-    padding: 2rem;
-    text-align: center;
-    background-image: url('../assets/aboutus.png'); /* Path to your image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
-  }
-  
-  .about-us h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
+  padding: 2rem;
+  text-align: center;
+  background-image: url('../assets/aboutus.png'); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.about-us h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #666;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
   .card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr); /* Stack cards in a single column on smaller tablets */
+    gap: 1.5rem;
   }
-  
-  .card {
-    background-color: #fff;
-    padding: 0.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr); /* Stack cards in a single column on smaller screens */
+    gap: 1rem;
+    padding: 1rem; /* Adjust padding for smaller screens */
   }
-  
+
+  .about-us h2 {
+    font-size: 2rem; /* Decrease heading font size for smaller screens */
+  }
+
   .card h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem; /* Decrease card heading font size for smaller screens */
   }
-  
+
   .card p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #666;
+    font-size: 0.9rem; /* Decrease card paragraph font size for smaller screens */
   }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
+}

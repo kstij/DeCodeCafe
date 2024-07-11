@@ -18,15 +18,26 @@
 }
 
 .home-content h1 {
-  line-height: 0.5;
+  line-height: 1; /* Adjust line height for better readability */
   font-size: 4rem;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
 
 .home-content h2 {
-  line-height: 0.5;
+  line-height: 1; /* Adjust line height for better readability */
   font-size: 2rem;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .home-content h1 {
+    font-size: 3rem; /* Adjust font size for smaller screens */
+  }
+  
+  .home-content h2 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
 }

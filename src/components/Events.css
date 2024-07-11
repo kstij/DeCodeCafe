@@ -8,6 +8,8 @@
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  background-image: url('../assets/ourevents.png'); /* Path to your image */
+  overflow: hidden;
 }
 
 .events h2 {
@@ -28,8 +30,8 @@
 }
 
 .upevent-cards {
-  display: flex; /* Change to flex for centering */
-  justify-content: center; /* Center the cards horizontally */
+  display: flex;
+  justify-content: center;
   gap: 2rem;
   flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
 }
@@ -43,7 +45,7 @@
   max-width: 60rem;
   width: 100%;
   background-image: url('../assets/devs.png'); /* Path to your image */
-  border: 2px solid #B79AEE;;
+  border: 2px solid #B79AEE;
 }
 
 .upevent-card:hover {
@@ -112,8 +114,8 @@
 }
 
 .event-cards {
-  display: flex; /* Change to flex for centering */
-  justify-content: center; /* Center the cards horizontally */
+  display: flex;
+  justify-content: center;
   gap: 2rem;
   flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
 }
@@ -127,7 +129,7 @@
   max-width: 60rem;
   height: 20rem;
   width: 100%;
-  border: 2px solid #B79AEE;;
+  border: 2px solid #B79AEE;
 }
 
 .event-card:hover {
@@ -195,22 +197,21 @@
   color: #ccc;
 }
 
-
 /* Responsive design */
 @media (max-width: 1200px) {
   .event-cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Adjust grid columns for medium screens */
   }
 }
 
 @media (max-width: 900px) {
   .event-cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Adjust grid columns for small screens */
   }
 }
 
 @media (max-width: 600px) {
   .event-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Adjust grid columns for extra small screens */
   }
 }

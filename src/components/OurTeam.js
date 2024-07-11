@@ -5,17 +5,10 @@ import team2 from '../assets/team2.jpg';
 // Import other images as needed
 
 const teamMembers = [
-  { name: 'John Doe', role: 'CEO', image: team1, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pretium nibh at ante pulvinar.' },
+  { name: 'Rahul Khinchi', role: 'CEO', image: team1, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pretium nibh at ante pulvinar.' },
   { name: 'Jane Smith', role: 'CTO', image: team2, description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.' },
-  { name: 'John Doe', role: 'CEO', image: team1, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pretium nibh at ante pulvinar.' },
+  { name: 'Rahul Khinchi', role: 'CEO', image: team1, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pretium nibh at ante pulvinar.' },
   { name: 'Jane Smith', role: 'CTO', image: team2, description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.' },
-  { name: 'John Doe', role: 'CEO', image: team1, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pretium nibh at ante pulvinar.' },
-  { name: 'Jane Smith', role: 'CTO', image: team2, description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.' },
-  { name: 'John Doe', role: 'CEO', image: team1, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pretium nibh at ante pulvinar.' },
-  { name: 'Jane Smith', role: 'CTO', image: team2, description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.' },
-  { name: 'John Doe', role: 'CEO', image: team1, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pretium nibh at ante pulvinar.' },
-  { name: 'Jane Smith', role: 'CTO', image: team2, description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.' },
-  { name: 'John Doe', role: 'CEO', image: team1, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pretium nibh at ante pulvinar.' },
   { name: 'Jane Smith', role: 'CTO', image: team2, description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.' },
 
 ];
@@ -25,7 +18,7 @@ const OurTeam = () => {
     <div className="our-team">
       <h2>Our Team</h2>
       <div className="team-cards">
-        {teamMembers.map((member, index) => (
+        {teamMembers.slice(0, 5).map((member, index) => (
           <div key={index} className="team-card">
             <div className="team-member">
               <img src={member.image} alt={member.name} className="team-member-img" />
@@ -38,6 +31,9 @@ const OurTeam = () => {
             </div>
           </div>
         ))}
+        <div className="team-card show-all-card">
+          <a href="/our-team" className="show-all-button">Show All</a>
+        </div>
       </div>
     </div>
   );
