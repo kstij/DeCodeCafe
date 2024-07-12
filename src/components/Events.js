@@ -1,18 +1,38 @@
 import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import './Events.css';
 
 // Import images
 import logoImage from '../assets/devs.png';
-import logoImage1 from '../assets/devs.png';
 
 const Events = () => {
   const upcomingEvents = [
-    { title: 'Upcoming Event 1', image: logoImage1, description: 'Description for upcoming event 1.', youtubeUrl: 'https://www.youtube.com/watch?v=video_id_1' },
+    { title: 'Upcoming Event 1', image: "devs.png", description: 'Description for upcoming event 1.', youtubeUrl: 'https://www.youtube.com/watch?v=video_id_1' },
   ];
 
   const pastEvents = [
     { title: 'Past Event 1', image: logoImage, description: 'Description for past event 1.', youtubeUrl: 'https://www.youtube.com/watch?v=video_id_2' },
+    { title: 'Past Event 2', image: logoImage, description: 'Description for past event 2.', youtubeUrl: 'https://www.youtube.com/watch?v=video_id_3' },
+    { title: 'Past Event 3', image: logoImage, description: 'Description for past event 3.', youtubeUrl: 'https://www.youtube.com/watch?v=video_id_4' },
+    { title: 'Past Event 4', image: logoImage, description: 'Description for past event 4.', youtubeUrl: 'https://www.youtube.com/watch?v=video_id_5' },
+    { title: 'Past Event 5', image: logoImage, description: 'Description for past event 5.', youtubeUrl: 'https://www.youtube.com/watch?v=video_id_6' },
+    // Add more past events here
   ];
+  
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    ease: "ease-in-out",
+    adaptiveHeight: true,
+    cssEase: "linear",
+  };
+
 
   return (
     <div className="events">
@@ -30,7 +50,6 @@ const Events = () => {
                       <p>{event.description}</p>
                     </div>
                   </div>
-                  <img src={event.image} alt={event.title} className="event-image" />
                 </div>
               </a>
             </div>
@@ -39,23 +58,23 @@ const Events = () => {
       </div>
       <div className="events-section">
         <h3>Past Events</h3>
-        <div className="event-cards">
+        <Slider {...settings}>
           {pastEvents.map((event, index) => (
             <div key={index} className="event-card">
               <a href={event.youtubeUrl} className="event-link">
                 <div className="event-image">
+                  <img src={event.image} alt={event.title} className="event-image" />
                   <div className="event-overlay">
                     <div className="event-info">
                       <h4>{event.title}</h4>
                       <p>{event.description}</p>
                     </div>
                   </div>
-                  <img src={event.image} alt={event.title} className="event-image" />
                 </div>
               </a>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
     </div>
   );

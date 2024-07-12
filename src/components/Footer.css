@@ -1,47 +1,64 @@
 /* Footer.css */
 
 .footer {
-  background-color: #292929;
+  background-color: #333;
   color: #fff;
-  padding: 4rem 2rem;
+  padding: 50px 0;
 }
 
 .footer-top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .footer-left {
   flex: 1;
-  max-width: 400px;
 }
 
 .footer-logo {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  margin-left: 3rem;
 }
 
 .footer-desc {
-  opacity: 0.8;
-  line-height: 1.5;
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-left: 3rem;
 }
 
-.footer-social {
-  margin-top: 1.5rem;
+.footer-join-us {
+  margin-top: 20px;
+  margin-right: 3rem;
 }
 
-.footer-social-link {
-  display: inline-block;
+.footer-newsletter {
+  display: flex;
+  align-items: center;
+}
+
+.footer-email-input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.footer-join-button {
+  background-color: #007bff;
   color: #fff;
-  text-decoration: none;
-  margin-right: 1rem;
-  opacity: 0.8;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.footer-social-link:hover {
-  opacity: 1;
+.footer-join-button:hover {
+  background-color: #0056b3;
 }
 
 .footer-right {
@@ -49,34 +66,54 @@
 }
 
 .footer-heading {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  margin-left: 6rem;
 }
 
 .footer-links {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
+  padding: 0 7rem;
 }
 
 .footer-links li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 
 .footer-links a {
-  color: #fff;
+  color: #ccc;
   text-decoration: none;
-  opacity: 0.8;
+  transition: color 0.3s;
+  
+  
+  justify-content:end;
 }
 
 .footer-links a:hover {
-  opacity: 1;
+  color: #fff;
 }
 
 .footer-bottom {
-  margin-top: 2rem;
-  border-top: 1px solid #444;
-  padding-top: 1rem;
-  text-align: center;
-  opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer-social {
+  display: flex;
+}
+
+.footer-social-link {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+.footer-social-link:hover {
+  color: #fff;
+}
+.footer-bottom{
+  margin-left: 3rem;
 }
