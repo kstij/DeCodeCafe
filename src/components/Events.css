@@ -1,5 +1,3 @@
-/* Events.css */
-
 .events {
   padding-top: 1rem;
   padding: 2rem;
@@ -33,7 +31,7 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
 .upevent-card {
@@ -44,8 +42,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 60rem;
   width: 100%;
-  background-image: url('../assets/devs.png'); /* Path to your image */
-  border: 2px solid #B79AEE;
+  background-image: url('../assets/devs.png');
+  border: 2px solid #B79AEE;;
 }
 
 .upevent-card:hover {
@@ -117,24 +115,29 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  flex-wrap: wrap;
+  overflow: hidden; /* Ensure overflow is hidden */
 }
 
 .event-card {
   position: relative;
   overflow: hidden;
+  justify-content: space-between;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adjust timing functions */
   max-width: 60rem;
-  height: 20rem;
   width: 100%;
   border: 2px solid #B79AEE;
 }
 
 .event-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-card.past-event {
+  max-width: 40rem; /* Example reduced width for past events */
 }
 
 .event-link {
@@ -157,7 +160,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Ensure consistency with JavaScript transitions */
 }
 
 .event-overlay {
@@ -175,7 +178,7 @@
   transition: opacity 0.3s ease;
 }
 
-.event-card:hover .upevent-overlay {
+.event-card:hover .event-overlay {
   opacity: 1;
 }
 
@@ -197,21 +200,195 @@
   color: #ccc;
 }
 
+/* Customize slick slider arrows */
+.slick-prev:before,
+.slick-next:before {
+  color: #482291 !important;
+  font-size: 2.5rem; /* Decrease the icon size for smaller screens */
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  width: 2.5rem; /* Decrease the width for smaller screens */
+  height: 2.5rem; /* Decrease the height for smaller screens */
+  transform: scale(1.5); /* Decrease the overall scale for smaller screens */
+}
+/* Adjust position for left arrow */
+.slick-prev {
+  left: 3rem !important; /* Adjust position for smaller screens */
+}
+
+/* Adjust position for right arrow */
+.slick-next {
+  right: 3rem !important; /* Adjust position for smaller screens */
+}
+
 /* Responsive design */
+@media (min-width: 3000px) {
+  .events h2 {
+    font-size: 5rem;
+  }
+
+  .events-section h3 {
+    font-size: 3rem;
+  }
+
+  .upevent-image,
+  .event-image {
+    height: 25rem;
+  }
+}
+
 @media (max-width: 1200px) {
-  .event-cards {
-    grid-template-columns: repeat(3, 1fr); /* Adjust grid columns for medium screens */
+  .events h2 {
+    font-size: 3rem;
+  }
+
+  .events-section h3 {
+    font-size: 2rem;
+  }
+
+  .upevent-image,
+  .event-image {
+    height: 20rem;
   }
 }
 
 @media (max-width: 900px) {
-  .event-cards {
-    grid-template-columns: repeat(2, 1fr); /* Adjust grid columns for small screens */
+  .events h2 {
+    font-size: 2.5rem;
+  }
+
+  .events-section h3 {
+    font-size: 1.8rem;
+  }
+
+  .upevent-image,
+  .event-image {
+    height: 18rem;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 2.5rem;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 2rem;
+    height: 2rem;
+    transform: scale(1);
+  }
+
+  .slick-prev {
+    left: 2rem !important;
+  }
+
+  .slick-next {
+    right: 2rem !important;
   }
 }
 
 @media (max-width: 600px) {
-  .event-cards {
-    grid-template-columns: 1fr; /* Adjust grid columns for extra small screens */
+  .events h2 {
+    font-size: 2rem;
+  }
+
+  .events-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .upevent-image,
+  .event-image {
+    height: 15rem;
+  }
+
+  /* Adjust arrow sizes and positions for smaller screens */
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 2.5rem;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 2rem;
+    height: 2rem;
+    transform: scale(1);
+  }
+
+  .slick-prev {
+    left: 2rem !important;
+  }
+
+  .slick-next {
+    right: 2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .events h2 {
+    font-size: 1.8rem;
+  }
+
+  .events-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .upevent-image,
+  .event-image {
+    height: 12rem;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 2rem;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 2rem;
+    height: 2rem;
+    transform: scale(1);
+  }
+
+  .slick-prev {
+    left: 1rem !important;
+  }
+
+  .slick-next {
+    right: 1rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .events h2 {
+    font-size: 1.5rem;
+  }
+
+  .events-section h3 {
+    font-size: 1rem;
+  }
+
+  .upevent-image,
+  .event-image {
+    height: 10rem;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 2rem;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 2rem;
+    height: 2rem;
+    transform: scale(1);
+  }
+
+  .slick-prev {
+    left: 1rem !important;
+  }
+
+  .slick-next {
+    right: 1rem !important;
   }
 }
