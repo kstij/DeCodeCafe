@@ -1,5 +1,3 @@
-/* Navbar.css */
-
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -18,6 +16,15 @@ body {
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   backdrop-filter: blur(10px); /* Add a slight blur for better readability */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.navbar.visible {
+  transform: translateY(0); /* Show navbar */
+}
+
+.navbar.hidden {
+  transform: translateY(-100%); /* Hide navbar */
 }
 
 .logo-container {
