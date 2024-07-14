@@ -9,7 +9,7 @@ import logoImage from '../assets/devs.png';
 
 const Events = () => {
   const upcomingEvents = [
-    { title: 'Upcoming Event 1', image: "devs.png", description: 'Description for upcoming event 1.', youtubeUrl: 'https://www.youtube.com/watch?v=video_id_1' },
+    { title: 'Upcoming Event 1', image: logoImage, description: 'Description for upcoming event 1.', youtubeUrl: 'https://www.youtube.com/watch?v=video_id_1' },
   ];
 
   const pastEvents = [

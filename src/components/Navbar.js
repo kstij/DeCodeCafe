@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import logo from '../assets/logo.png'; // Make sure you have a logo.svg file in the src/assets directory
 
 const Navbar = () => {
+  const [scrollingUp, setScrollingUp] = useState(true);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      if (window.scrollY < lastScrollY) {
+        setScrollingUp(true);
+      } else {
+        setScrollingUp(false);
+      }
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrollingUp ? 'visible' : 'hidden'}`}>
       <div className="logo-container">
         <img src={logo} alt="Community Logo" className="logo" />
         <h1 className="community-navname">DecodeCafe Community</h1>
