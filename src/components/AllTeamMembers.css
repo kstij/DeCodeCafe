@@ -1,0 +1,79 @@
+/* src/components/AllTeamMembers.css */
+.all-team-members {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9; /* Adjust background color as needed */
+  }
+  
+  .all-team-members h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .team-card {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .team-member {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .team-member-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .team-card:hover .team-member-hover {
+    opacity: 1;
+  }
+  
+  .team-member-hover-content {
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+  }
+  
+  .team-member-hover-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-member-hover-content p {
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+  

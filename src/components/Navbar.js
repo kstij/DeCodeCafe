@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../assets/logo.png'; // Make sure you have a logo.svg file in the src/assets directory
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [scrollingUp, setScrollingUp] = useState(true);
@@ -36,7 +37,7 @@ const Navbar = () => {
         <li><a href="#sponsor">Sponsor Us</a></li>
         <li><a href="#team">Team</a></li>
         <li><a href="#blog">Blog</a></li>
-        <li><a href="#coc">Code of Conduct</a></li>
+        <li><Link to="/coc">Code of Conduct</Link></li>
         <li><a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="discord-button">Join</a></li>
       </ul>
     </nav>
