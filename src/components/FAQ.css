@@ -1,0 +1,176 @@
+/* Base styles */
+.faq {
+  margin: 4rem;
+  padding: 2rem;
+  height:25rem;
+  box-sizing: border-box;
+}
+
+.faq-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.faq-items {
+  width: 100%;
+  max-width: 700px; /* Adjust max-width as needed */
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.faq-item {
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  position: relative;
+  z-index: 1; /* Default z-index */
+}
+
+.faq-item.active {
+  transform: translateY(-5px);
+  z-index: 10; /* Bring to front */
+}
+
+.faq-question {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #B79AEE;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Ensures question element takes full width */
+  box-sizing: border-box; /* Includes padding in width */
+  display: flex;
+  justify-content: space-between; /* Distribute space between text and arrow */
+  align-items: center; /* Vertically center items */
+  border-radius: 2rem 2rem 0 0;
+}
+
+.faq-arrow {
+  margin-left: 10px; /* Adjust spacing as needed */
+}
+
+.faq-answer {
+  padding: 10px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 5px solid #ccc;
+  border-radius: 0 0 2rem 2rem;
+  background-color: #f9f9f9;
+  width: 100%; /* Ensures answer element takes full width */
+  box-sizing: border-box; /* Includes padding in width */
+}
+
+.faq-image {
+  width: 100%;
+  max-width: 700px; /* Adjust max-width as needed */
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  perspective: 1000px;
+  margin: 0 auto; /* Center the image container */
+}
+
+.faq-image-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 16rem; /* Adjust max-width as needed */
+  height: auto;
+  backface-visibility: hidden;
+  transition: transform 0.6s, opacity 0.6s;
+}
+
+.faq-image-alt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 26rem; /* Adjust max-width as needed */
+  height: auto;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  opacity: 0;
+  transition: transform 0.6s, opacity 0.6s;
+}
+
+.image-container:hover .faq-image-main {
+  transform: translateY(-10px) rotateY(180deg);
+  opacity: 0;
+}
+
+.image-container:hover .faq-image-alt {
+  transform: translateY(-10px) rotateY(360deg);
+  opacity: 1;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 1200px) {
+  .faq-container {
+    flex-direction: row;
+  }
+
+  .faq-items {
+    width: 50%; /* Adjust width for large screens */
+  }
+
+  .faq-image {
+    width: 35%; /* Adjust width for large screens */
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .faq-container {
+    flex-direction: row;
+  }
+
+  .faq-items {
+    width: 50%; /* Adjust width for medium screens */
+  }
+
+  .faq-image {
+    width: 45%; /* Adjust width for medium screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .faq{
+    height:50rem;
+  }
+  .faq-container {
+    flex-direction: column;
+  }
+
+  .faq-items,
+  .faq-image {
+    width: 100%; /* Full width for small screens */
+  }
+
+  .image-container {
+    text-align: center; /* Center images for small screens */
+  }
+}
+@media (max-width: 360px) {
+  .faq{
+    height:50rem;
+  }
+  .faq-container {
+    flex-direction: column;
+  }
+
+  .faq-items,
+  .faq-image {
+    margin-left: -5rem;
+    width: 190%; /* Full width for small screens */
+    font-family: "Poppins";
+  }
+  .faq-image{
+    margin-left: -4rem;
+  }
+  .image-container {
+    text-align: center; /* Center images for small screens */
+  }
+}

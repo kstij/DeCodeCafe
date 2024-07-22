@@ -43,17 +43,37 @@
   margin-bottom: 2rem;
   display: flex;
 }
-
+.heading-1-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .footer-heading {
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.1rem;
+  margin-left: 4.5rem;
 }
 
+.footer-heading-2{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+}
+
+.heading-2-items{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .footer-links ul {
   list-style-type: none;
   padding: 0;
 }
-
+.heading-1-2{
+  margin-left: 3rem;
+}
 .footer-links li {
   margin-bottom: 8px;
 }
@@ -61,11 +81,12 @@
 .footer-links a {
   color: #ccc;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s, text-decoration 0.3s; /* Added text-decoration transition */
 }
 
 .footer-links a:hover {
   color: #6c63ff;
+  text-decoration: underline; /* Added underline on hover */
 }
 
 .footer-contact {
@@ -73,6 +94,9 @@
 }
 
 .footer-quick {
+  margin-left: 5rem;
+}
+.footer-quick-2 {
   margin-left: 5rem;
 }
 
@@ -156,21 +180,21 @@
 
 .footer-bottom-text {
   position: absolute;
-  bottom:2rem;
-  left:25rem;
+  bottom: 2rem;
+  left: 25rem;
   text-align: center;
 }
 
 .news-main {
   font-size: 2.25rem;
   color: #6c63ff;
-  font-family: 'poppins';
+  font-family: 'Poppins';
 }
 
 .news-sub {
   font-size: 1.20rem;
   color: #fff;
-  font-family: 'poppins';
+  font-family: 'Poppins';
 }
 
 .div-background {
@@ -272,6 +296,61 @@
     max-width: 100%;
     margin: 0;
   }
+  .footer-column{
+    margin-bottom: 2rem;
+  }
+  .footer-newsletter-container{
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+  }
+  .footer-community,
+  .footer-contact,
+  .footer-quick,
+  .footer-newsletter-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .footer-divider {
+    margin-left: -7rem;
+  }
+
+  .footer-divider-vertical {
+    border-left: none;
+    border-top: 0.5px solid #444;
+    margin: 20px 0;
+    align-self: center;
+    width: 80%;
+  }
+  .footer-bottom-text{
+    left:16rem;
+  }
+}
+@media (max-width: 928px) {
+  .footer-bottom-text{
+    left:13rem;
+    font-size: 0.8rem;
+  }
+  .footer-newsletter-container{
+    margin-top: -4rem;
+    margin-bottom: 8rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column,
+  .footer-newsletter-container {
+    max-width: 100%;
+    margin: 0;
+  }
+  .footer-newsletter-container{
+    margin-top: -4rem;
+    margin-bottom: 4rem;
+  }
 
   .footer-community,
   .footer-contact,
@@ -292,31 +371,39 @@
     align-self: center;
     width: 80%;
   }
-}
-
-@media (max-width: 768px) {
-  .footer-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-newsletter-container {
-    align-items: center;
-  }
-
-  .footer-email-input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .footer-join-button {
-    width: 100%;
+  .footer-bottom-text{
+    left:8rem;
+    font-size: 0.75rem;
   }
 }
-
+@media (max-width: 663px) {
+  .footer-bottom-text{
+    left:7rem;
+    font-size: 0.68rem;
+  }
+}
+@media (max-width: 597px) {
+  .footer-bottom-text{
+    left:6.5rem;
+    font-size: 0.63rem;
+  }  
+}
 @media (max-width: 480px) {
   .footer {
-    padding: 20px 10px;
+    padding: 4rem 3rem;
+  }
+  .footer-links{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-heading{
+    margin-left: 8rem;
+  }
+  .footer-heading-2{
+    margin-left: 4rem;
+  }
+  .heading-2-items{
+    margin-left:-4rem;
   }
 
   .footer-logo {
@@ -331,9 +418,17 @@
     font-size: 1rem;
     margin-right: 5px;
   }
+  .footer-bottom-text{
+    font-size: 0.5rem;
+    left:5.5rem;
+  }
+  .div-background{
+    width:25rem;
+    height:11.5rem;
+  }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
   .footer-logo {
     font-size: 1.2rem;
   }
@@ -342,10 +437,38 @@
   .footer-links a {
     font-size: 0.8rem;
   }
-
+  .footer-newsletter{
+    width: 19rem;
+    margin-left: -1rem;
+  }
   .footer-email-input,
   .footer-join-button {
     font-size: 0.8rem;
     padding: 5px 10px;
+  }
+  .footer-bottom-text{
+    font-size: 0.44rem;
+    left:4rem;
+  }
+  .footer-links{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-heading{
+    margin-left: 5.5rem;
+  }
+  .footer-heading-2{
+    margin-left: 0.5rem;
+  }
+  .heading-2-items{
+    margin-left:-4rem;
+  }
+  .div-background{
+    width:20rem;
+    height:11rem;
+    visibility:hidden;
+  }
+  .footer-bottom{
+    height:5rem;
   }
 }
