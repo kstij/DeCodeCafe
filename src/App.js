@@ -8,9 +8,11 @@ import Events from './components/Events';
 import OurTeam from './components/OurTeam';
 import CodeOfConduct from './components/CodeOfConduct';
 import AllTeamMembers from './components/AllTeamMembers';
+import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   return (
@@ -31,6 +33,9 @@ function App() {
               </section>
               <section id="team">
                 <OurTeam />
+              </section>
+              <section id="faq">
+                <FAQ />
               </section>
               <Footer />
             </div>

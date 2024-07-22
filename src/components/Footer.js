@@ -57,10 +57,25 @@ const Footer = () => {
           <div className="footer-links">
             <div className='footer-quick'>
               <h3 className="footer-heading">Useful Links</h3>
+              <div className='heading-1-links'>
               <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="#about">Blog</a></li>
                 <li><a href="#events">Events</a></li>
+              </ul>
+              <ul className='heading-1-2'>
+                <li><a href="#home">Blog</a></li>
+                <li><a href="https://discord.gg/SUUew6jBDU">Discord</a></li>
+                <li><a href="https://github.com/DeCodeCafe">Github</a></li>
+              </ul>
+              </div>
+            </div>
+            <div className='footer-quick-2'>
+              <h3 className="footer-heading-2">COMPANY</h3>
+              <ul className='heading-2-items'>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="https://github.com/DeCodeCafe/Code-of-Conduct">Privacy Policies</a></li>
               </ul>
             </div>
           </div>
@@ -80,10 +95,10 @@ const Footer = () => {
             </button>
           </div>
           <div className="footer-social">
-            <a href="#" className="footer-social-link bird" onClick={handleTwitterClick}><FaTwitter /></a>
-            <a href="#" className="footer-social-link insta" onClick={handleInstagramClick}><FaInstagram /></a>
-            <a href="#" className="footer-social-link youtube" onClick={handleYouTubeClick}><FaYoutube /></a>
-            <a href="#" className="footer-social-link linkedin"><FaLinkedin /></a>
+            <a href="https://x.com/decodecafe_" className="footer-social-link bird" ><FaTwitter /></a>
+            <a href="https://www.instagram.com/decodecafe_x/" className="footer-social-link insta" ><FaInstagram /></a>
+            <a href="https://www.youtube.com/@decodecafe" className="footer-social-link youtube" ><FaYoutube /></a>
+            <a href="https://www.linkedin.com/company/decodecafe-community/" className="footer-social-link linkedin"><FaLinkedin /></a>
           </div>
         </div>
       </div>
